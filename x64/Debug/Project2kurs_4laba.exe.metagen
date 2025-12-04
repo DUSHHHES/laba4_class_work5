@@ -1,0 +1,95 @@
+  Project2kurs4laba.AddEditTariffForm.resources - Embedded, ContainedInManifestFile, 
+  Project2kurs4laba.MainForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Project2kurs_4laba, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Tariff: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Discount 'get set' : 
+    CargoType Type 'get set' : 
+    Double PricePerKm 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PricePerKm(): PrivateScope, Public, HideBySig, SpecialName
+    set_PricePerKm(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(CargoType): PrivateScope, Public, HideBySig, SpecialName
+    get_Discount(): PrivateScope, Public, HideBySig, SpecialName
+    set_Discount(Double): PrivateScope, Public, HideBySig, SpecialName
+    getFinalPrice(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Client: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String ContactInfo 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ContactInfo(): PrivateScope, Public, HideBySig, SpecialName
+    set_ContactInfo(String): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class Order: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Distance 'get set' : 
+    Tariff OrderTariff 'get set' : 
+    Client OrderClient 'get set' : 
+  Methods:
+    get_OrderClient(): PrivateScope, Public, HideBySig, SpecialName
+    set_OrderClient(Client): PrivateScope, Public, HideBySig, SpecialName
+    get_OrderTariff(): PrivateScope, Public, HideBySig, SpecialName
+    set_OrderTariff(Tariff): PrivateScope, Public, HideBySig, SpecialName
+    get_Distance(): PrivateScope, Public, HideBySig, SpecialName
+    set_Distance(Double): PrivateScope, Public, HideBySig, SpecialName
+    calculateCost(): PrivateScope, Public, HideBySig
+Class Project2kurs_4laba.AddEditTariffForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Tariff): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Tariff ResultTariff 'get set' : 
+  Methods:
+    get_ResultTariff(): PrivateScope, Public, HideBySig, SpecialName
+    set_ResultTariff(Tariff): PrivateScope, Public, HideBySig, SpecialName
+Struct CargoType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CargoType GENERAL = 0 : Public, Static, Literal, HasDefault
+    CargoType FRAGILE = 1 : Public, Static, Literal, HasDefault
+    CargoType DANGEROUS = 2 : Public, Static, Literal, HasDefault
+    CargoType PERISHABLE = 3 : Public, Static, Literal, HasDefault
+Class Project2kurs_4laba.DatabaseManager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Connect(): PrivateScope, Public, HideBySig
+    InitializeDatabase(): PrivateScope, Public, HideBySig
+    GetAllTariffs(): PrivateScope, Public, HideBySig
+    AddTariff(Tariff): PrivateScope, Public, HideBySig
+    UpdateTariff(Tariff, String): PrivateScope, Public, HideBySig
+    DeleteTariff(String): PrivateScope, Public, HideBySig
+    ClearAllTariffs(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Project2kurs_4laba.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
