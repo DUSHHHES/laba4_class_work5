@@ -1,4 +1,6 @@
 <br>
+В данной работе было осуществлено подключение SQLite
+<br>
 <img width-="844" height="636" alt="image" src="https://github.com/user-attachments/assets/1a92ed64-4544-42dd-8d95-5bd1cbf66710" />
 <br>
 Основное окно программы
